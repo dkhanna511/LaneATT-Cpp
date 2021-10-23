@@ -1,0 +1,7 @@
+<launch>
+        <node name="image_pub_lane" pkg="lane_detection" type="image_pub_lane" output="screen">
+                <rosparam file="$(find lane_detection)/lane_params.yaml" command="load" />
+        </node>
+</launch>
+
+

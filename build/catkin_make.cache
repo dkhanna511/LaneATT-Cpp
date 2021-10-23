@@ -1,0 +1,2 @@
+lane_detection
+-DCATKIN_DEVEL_PREFIX=/home/dheeraj/lane_detection_module/devel -DCMAKE_INSTALL_PREFIX=/home/dheeraj/lane_detection_module/install -G Unix Makefiles

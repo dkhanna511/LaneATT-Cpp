@@ -1,0 +1,6 @@
+/resize_image_width: 640.0
+/resize_image_height: 360.0
+/subscribed_image: "/kitti/camera_color_left/image_raw"
+/image_pub_lane_output: "/camera/output_lane"
+/model_path: "/home/dheeraj/alive/src/lane_detection/src/traced_laneatt_model_r18_half.pt"
+/confidence_threshold: 0.5
