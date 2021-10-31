@@ -67,18 +67,20 @@ class Visualizer{
 	ros::Subscriber subscribe_tl;
 	ros::Subscriber subscribe_objects;
 	int video_init = 1;
+	std::string input_topic, published_topic;
 	cv::VideoWriter video;
 
 	
-
 public:
 	Visualizer()
 	: it_(nh_)
 	{
+		ros::param::get("/image_pub_lane_output", input_topic);
+		ros::param::get("/visualizer_output", published_topic);
 		// subscrive to input video feed and publish output video feed
-		image_pub_ = it_.advertise("/visualizer/output_video_lane", 1);
+		image_pub_ = it_.advertise(published_topic, 1);
 		// subscribe_tl = n.subscribe("/detection/image_detector/tl", 1, &visualizer::tl_callback);
-		subscribe_objects = nh_.subscribe("/camera/output_lane", 1, &Visualizer::objectCb, this);
+		subscribe_objects = nh_.subscribe(input_topic, 1, &Visualizer::objectCb, this);
 	}
 
 	~Visualizer()
