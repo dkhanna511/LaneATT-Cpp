@@ -4,3 +4,4 @@
 /image_pub_lane_output: "/camera/output_lane"
 /model_path: "/home/dheeraj/alive/src/lane_detection/src/traced_laneatt_model_r18_half.pt"
 /confidence_threshold: 0.5
+/visualizer_output: "/visualizer/output_video_lane"
